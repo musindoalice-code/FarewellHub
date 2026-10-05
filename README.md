@@ -2,377 +2,303 @@
 
 # 🕊️ FarewellHub
 
-### End-to-End Funeral Services Data & Analytics Project
+### From information → to data → to insight → to better decisions
 
-**Website → Google Sheets → Data Studio → Databricks → SQL → Business Insights**
+**An end-to-end data analytics project for a funeral services platform**
 
-<p>
-  Turning collected funeral-service information into organised data, analysis, visual reporting and business insights.
-</p>
+`Website` → `Google Sheets` → `BigQuery` → `Looker Studio` → `Databricks` → `SQL` → `Business Insights`
+
+<br>
+
+![SQL](https://img.shields.io/badge/SQL-Analysis-blue?style=for-the-badge&logo=postgresql&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-Processing-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-Warehouse-4285F4?style=for-the-badge&logo=googlebigquery&logoColor=white)
+![Looker Studio](https://img.shields.io/badge/Looker_Studio-Dashboard-4285F4?style=for-the-badge&logo=looker&logoColor=white)
+![Google Sheets](https://img.shields.io/badge/Google_Sheets-Collection-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)
+
+<br>
+
+<img src="images/banner.png" alt="FarewellHub Banner" width="90%">
 
 </div>
 
 ---
 
-<p align="center">
-  <img src="images/FarewellHub-Banner.png" alt="FarewellHub Banner" width="100%">
-</p>
+## 📑 Table of Contents
+
+1. [Project Overview](#-project-overview)
+2. [Business Objective](#-business-objective)
+3. [End-to-End Data Flow](#-end-to-end-data-flow)
+4. [Live Project Links](#-live-project-links)
+5. [Stage-by-Stage Breakdown](#-stage-by-stage-breakdown)
+6. [SQL Analysis](#-sql-analysis)
+7. [From Data to Business Insights](#-from-data-to-business-insights)
+8. [Project Screenshots](#-project-screenshots)
+9. [Technology Stack](#-technology-stack)
+10. [Repository Structure](#-repository-structure)
+11. [What I Learned](#-what-i-learned)
+12. [Future Improvements](#-future-improvements)
+13. [About the Author](#-about-the-author)
 
 ---
-https://www.figma.com/make/sYnPIxBm1Ql967WDRmesjd/Funeral-Service-Hub?code-node-id=0-9&p=f&t=hKoiVl6iZFMhH9ly-0&fullscreen=1
-https://docs.google.com/spreadsheets/d/16MxvoM3bt23Jw0mS1rV2pscQjTzJYCYj4i1E0j3H7sU/edit?gid=1309034753#gid=1309034753
-https://console.cloud.google.com/bigquery?authuser=2&organizationId=0&project=farewellhub&supportedpurview=project&ws=!1m12!1m5!4m3!1sfarewellhub!2sFarewellHub!3sFarewellHub_leads!23sRECENT_RESOURCES!1m5!1m3!1sfarewellhub!2sjob_c9sXsmsqv_2oDGYUnZPTShRrW6bb!3safrica-south1!23sQUERY_RESOURCE
-https://datastudio.google.com/u/2/reporting/create?c.mode=edit&c.source=BQ_UI&ds.type=CUSTOM_QUERY&ds.connector=BIG_QUERY&ds.sql=SELECT%20*%0D%0A%20FROM%20%60farewellhub.FarewellHub.FarewellHub_leads%60%20LIMIT%201000&ds.billingProjectId=farewellhub&ds.projectId=farewellhub&ds.tableId=anonev_VAz6XDEPtoni_du5euFt2_J2zGW8Pqk1EYdvosRBlC4&ds.datasetId=_81123107b961e1907cd4ac4cb4ed0b6dc3aa1aff&ds.sqlType=STANDARD_SQL
-https://dbc-1f555e68-384c.cloud.databricks.com/editor/notebooks/3439460449319517?o=7474652278053184#command/8008453004454762
 
-# 📌 Project Overview
+## 📌 Project Overview
 
-FarewellHub is an end-to-end data analytics project built around a funeral services platform.
+**FarewellHub** is a complete data analytics project built around a funeral services platform.
 
-The project demonstrates how information can be collected from a website, organised into a structured dataset, connected to reporting tools, processed in Databricks and analysed using SQL.
+It shows the whole journey of data, not just the final dashboard:
 
-The objective was not only to create a dashboard, but to demonstrate the **complete journey of data from collection to decision-making**.
+> information is **captured** on a website, **organised** in Google Sheets, **loaded** into a cloud warehouse, **explored** visually, **cleaned and prepared** in Databricks, **analysed** with SQL, and finally turned into **business recommendations**.
 
-### 🔄 End-to-End Data Flow
+| | |
+|---|---|
+| **Domain** | Funeral services |
+| **Project type** | End-to-end data analytics (collection → insight) |
+| **Core skills shown** | Data collection, quality checks, cleaning, SQL, dashboards, storytelling |
+| **Goal** | Prove I can take a business from raw information to decisions |
 
-```text
-┌─────────────────┐
-│     WEBSITE     │
-│                 │
-│ Information     │
-│ Collection      │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  GOOGLE SHEETS  │
-│                 │
-│ Data Collection │
-│ & Organisation  │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│   DATA STUDIO   │
-│                 │
-│ Visual Reporting│
-│ & Exploration   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│    DATABRICKS   │
-│                 │
-│ Data Processing │
-│ & Preparation   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│       SQL       │
-│                 │
-│ Business        │
-│ Analysis        │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│    INSIGHTS     │
-│                 │
-│ Findings &      │
-│ Recommendations │
-└─────────────────┘
-#🎯 Business Objective
+---
 
-The purpose of the project was to demonstrate how raw information can be transformed into useful business information.
+## 🎯 Business Objective
 
-The project focused on:
+Show how raw information becomes useful business intelligence by:
 
-Collecting information from a website
-Organising the information into a structured format
-Connecting the dataset to a visual reporting platform
-Bringing the data into Databricks
-Performing data preparation and transformation
-Using SQL to answer business questions
-Creating meaningful visualisations
-Turning analysis into business insights
+- 🌐 Collecting information from a website
+- 📊 Organising it into a structured dataset
+- ☁️ Loading the data into a cloud warehouse
+- 📈 Connecting it to a visual reporting platform
+- 🧱 Bringing it into Databricks for preparation and transformation
+- 🧮 Using SQL to answer real business questions
+- 💡 Turning analysis into clear, actionable insight
 
-#🌐 1. Website
+---
 
-The website represents the starting point of the data journey.
+## 🔄 End-to-End Data Flow
 
-Information was collected through the FarewellHub platform and prepared for further analysis.
+```mermaid
+flowchart TD
+    A["🌐 WEBSITE<br/>Information collection"] --> B["📊 GOOGLE SHEETS<br/>Collection & organisation"]
+    B --> C["☁️ BIGQUERY<br/>Cloud data warehouse"]
+    C --> D["📈 LOOKER STUDIO<br/>Visual reporting & exploration"]
+    B --> E["🧱 DATABRICKS<br/>Processing & preparation"]
+    C --> E
+    E --> F["🧮 SQL<br/>Business analysis"]
+    F --> G["💡 INSIGHTS<br/>Findings & recommendations"]
+    D --> G
 
-Website → Data
-Website
-   ↓
-Information captured
-   ↓
-Structured records
-   ↓
-Google Sheets
+    style A fill:#e8f1ff,stroke:#4285F4,color:#111
+    style B fill:#e6f6ea,stroke:#34A853,color:#111
+    style C fill:#e8f1ff,stroke:#4285F4,color:#111
+    style D fill:#fff4e0,stroke:#F9AB00,color:#111
+    style E fill:#ffe9e5,stroke:#FF3621,color:#111
+    style F fill:#efe8ff,stroke:#7C4DFF,color:#111
+    style G fill:#fff9d6,stroke:#E0B400,color:#111
+```
 
-The website provides the front-end environment where information can be collected before being transferred into the analytical workflow.
+**The guiding principle:**
 
-#📊 2. Google Sheets — Data Collection
+```
+Data  →  Finding  →  Meaning  →  Action
+```
 
-Google Sheets was used as the initial structured data collection environment.
+---
 
-The information collected from the website was organised into rows and columns so that it could be used for reporting and further processing.
+## 🔗 Live Project Links
 
-Data workflow
-Website Information
-        ↓
-Google Sheets
-        ↓
-Structured Dataset
-        ↓
-Data Validation
+| Stage | Link |
+|---|---|
+| 🎨 Website design (Figma) | [Open prototype](https://www.figma.com/make/sYnPIxBm1Ql967WDRmesjd/Funeral-Service-Hub?code-node-id=0-9&p=f&t=hKoiVl6iZFMhH9ly-0&fullscreen=1) |
+| 📊 Dataset (Google Sheets) | [Open spreadsheet](https://docs.google.com/spreadsheets/d/16MxvoM3bt23Jw0mS1rV2pscQjTzJYCYj4i1E0j3H7sU/edit?gid=1309034753#gid=1309034753) |
+| ☁️ Warehouse (BigQuery) | `farewellhub.FarewellHub.FarewellHub_leads` |
+| 🧱 Notebook (Databricks) | [Open notebook](https://dbc-1f555e68-384c.cloud.databricks.com/editor/notebooks/3439460449319517?o=7474652278053184#command/8008453004454762) |
 
-This stage helped establish a consistent dataset before moving into the analytical environment.
+> 💡 Some of these links require sign-in. Screenshots of every stage are in the [Project Screenshots](#-project-screenshots) section.
 
-#📈 3. Google Data Studio — Visual Reporting
+---
 
-The Google Sheets dataset was connected to Google Data Studio to create visual reporting.
+## 🧭 Stage-by-Stage Breakdown
 
-This allowed the information to be explored through:
+### 🌐 1. Website — where the data starts
+Information is captured through the FarewellHub platform and prepared for the analytical workflow.
 
-Charts
-Tables
-Filters
-Summary views
-Interactive reporting
-Reporting workflow
-Google Sheets
-      ↓
-Google Data Studio
-      ↓
-Interactive Reporting
-      ↓
-Business Understanding
+```
+Website  →  Information captured  →  Structured records  →  Google Sheets
+```
 
-The dashboard provided an initial visual view of the information before deeper SQL analysis was performed.
+### 📊 2. Google Sheets — collection & organisation
+Records were organised into clean rows and columns, giving the project a consistent, validated dataset before it entered the analytical environment.
 
-#🧱 4. Databricks — Data Processing
+```
+Website information  →  Google Sheets  →  Structured dataset  →  Validation
+```
 
-Databricks was used as the analytical environment for working with the dataset.
+### ☁️ 3. BigQuery — cloud warehouse
+The dataset was loaded into BigQuery as the `FarewellHub_leads` table, making it queryable at scale and connectable to reporting tools.
 
-The data was brought into Databricks so that it could be examined, prepared and queried using SQL.
+### 📈 4. Looker Studio — visual reporting
+An interactive dashboard gave a first visual read of the data **before** any deep SQL work:
 
-Databricks workflow
-Raw Dataset
-     ↓
-Data Inspection
-     ↓
-Data Quality Checks
-     ↓
-Cleaning
-     ↓
-Transformation
-     ↓
-SQL Analysis
+- Charts and tables
+- Filters and summary views
+- Interactive exploration
 
-The Databricks stage allowed the project to move from simple reporting into a more structured analytical workflow.
+### 🧱 5. Databricks — processing & preparation
+Databricks became the analytical workspace where the data was inspected, prepared and queried.
 
-#🔍 5. Data Understanding
+```
+Raw dataset → Inspection → Quality checks → Cleaning → Transformation → SQL analysis
+```
 
-Before analysing the information, the dataset was reviewed to understand:
+### 🔍 6. Data Understanding
+Before drawing any conclusion, the dataset was reviewed for:
 
-Available fields
-Data types
-Missing information
-Duplicate records
-Inconsistent values
-Relationships between fields
-Available business dimensions
-Potential analytical questions
+- Available fields and data types
+- Missing information
+- Duplicate records
+- Inconsistent values
+- Relationships between fields
+- Business dimensions and potential analytical questions
 
-The aim was to understand the data before making conclusions from it.
+### 🧹 7. Data Preparation
+```
+Raw data → Check structure → Check missing values → Check duplicates
+        → Check consistency → Clean / transform → Analysis-ready data
+```
+Every analysis runs on a **prepared** dataset, never on unchecked raw data.
 
-#🧹 6. Data Preparation
+---
 
-Data preparation was an important part of the project.
+## 🧮 SQL Analysis
 
-The workflow included reviewing the data for potential quality issues and preparing it for analysis.
+Every query starts from a **business question**, not from code:
 
-Preparation process
-Raw Data
-   ↓
-Check Structure
-   ↓
-Check Missing Values
-   ↓
-Check Duplicates
-   ↓
-Check Consistency
-   ↓
-Clean / Transform
-   ↓
-Analysis-Ready Data
+```
+Business question → SQL query → Result → Interpretation → Business insight
+```
 
-This ensured that the analysis was based on a structured dataset rather than simply querying unprepared information.
-
-#🧮 7. SQL Analysis
-
-SQL was used in Databricks to answer business questions from the prepared dataset.
-
-The analysis followed a simple approach:
-
-Business Question
-       ↓
-SQL Query
-       ↓
-Result
-       ↓
-Interpretation
-       ↓
-Business Insight
-Example SQL workflow
-SELECT
-    *
-FROM farewellhub_data
-LIMIT 10;
-
-The initial queries were used to understand the available data before moving into more detailed analysis.
-
-#💡 8. Business Questions
-
-The SQL analysis was structured around business questions rather than simply writing queries.
-
-Examples include:
-
-Data Overview
-SELECT
-    COUNT(*) AS total_records
+### 🔎 Data overview
+```sql
+SELECT COUNT(*) AS total_records
 FROM farewellhub_data;
-Category Analysis
+```
+
+### 🗂️ Category analysis
+```sql
 SELECT
     category,
     COUNT(*) AS total_records
 FROM farewellhub_data
 GROUP BY category
 ORDER BY total_records DESC;
-Location Analysis
+```
+
+### 📍 Location analysis
+```sql
 SELECT
     location,
     COUNT(*) AS total_records
 FROM farewellhub_data
 GROUP BY location
 ORDER BY total_records DESC;
-Trend Analysis
+```
+
+### 📅 Trend analysis
+```sql
 SELECT
     date,
     COUNT(*) AS total_records
 FROM farewellhub_data
 GROUP BY date
 ORDER BY date;
+```
 
-Note: The final SQL queries were developed according to the actual fields available in the FarewellHub dataset.
+> 📝 Table and column names above are illustrative. The final queries in the repository use the actual fields in the FarewellHub dataset.
 
-#📊 9. Analysis & Visualisation
+### 🧰 Two tools, one workflow
 
-The project used two complementary approaches to reporting.
+| Tool | Role |
+|---|---|
+| **Looker Studio** | Interactive visual exploration and dashboard reporting |
+| **Databricks SQL** | Deeper querying, analysis and validation |
 
-Google Data Studio
+```
+Data → Visual exploration → SQL analysis → Business questions → Insights
+```
 
-Used for interactive visual exploration and dashboard reporting.
+---
 
-Databricks SQL
+## 💡 From Data to Business Insights
 
-Used for deeper querying, analysis and validation.
+For every important finding, I answer three questions:
 
-Together, they created the following workflow:
+| Question | Meaning |
+|---|---|
+| **What happened?** | What does the data show? |
+| **Why does it matter?** | Why is this important to the business? |
+| **What should happen next?** | What action should be considered? |
 
-Data
- ↓
-Visual Exploration
- ↓
-SQL Analysis
- ↓
-Business Questions
- ↓
-Insights
+### 📌 Key analytical areas
 
-#💡 10. From Data to Business Insights
+| Area | Purpose |
+|---|---|
+| 🕊️ Service information | Understand available funeral-related services |
+| 📍 Location | Understand geographical distribution |
+| 🗂️ Categories | Compare service categories |
+| 📅 Trends | Identify change over time |
+| 📈 Records | Monitor volumes and activity |
+| 👥 Customer information | Understand available customer-related data |
+| 🎯 Business performance | Identify areas that need attention |
 
-The objective of the project was not simply to produce charts.
+### 🧾 Findings
+Detailed findings and recommendations are documented in [`6. Insights/Business Insights.md`](6.%20Insights/Business%20Insights.md).
 
-The analysis followed the principle:
+<!--
+Tip: add your top 3 findings here as a table to impress recruiters.
 
-Data → Finding → Meaning → Action
+| # | Finding | Why it matters | Recommended action |
+|---|---------|----------------|--------------------|
+| 1 |         |                |                    |
+-->
 
-For every important finding, the following questions were considered:
+---
 
-What happened?
+## 📸 Project Screenshots
 
-What does the data show?
+<div align="center">
 
-Why does it matter?
+### 🌐 Website
+<img src="images/website.png" alt="FarewellHub Website" width="90%">
 
-Why is the finding important to the business?
+### 📊 Google Sheets Dataset
+<img src="images/google-sheets.png" alt="FarewellHub Google Sheets Dataset" width="90%">
 
-What should happen next?
+### 📈 Looker Studio Dashboard
+<img src="images/data-studio.png" alt="FarewellHub Looker Studio Dashboard" width="90%">
 
-What action could be considered based on the finding?
+### 🧱 Databricks Analysis
+<img src="images/databricks.png" alt="FarewellHub Databricks Analysis" width="90%">
 
-#📌 11. Key Analytical Areas
+</div>
 
-The project can be used to analyse areas such as:
+---
 
-Area	Purpose
-Service Information	Understand available funeral-related services
-Location	Understand geographical distribution
-Categories	Compare different service categories
-Trends	Identify changes over time
-Records	Monitor volumes and activity
-Customer Information	Understand available customer-related data
-Business Performance	Identify areas requiring attention
+## 🛠️ Technology Stack
 
-#🏗️ Project Architecture
-                    FAREWELLHUB
-                         │
-                         ▼
-                ┌─────────────────┐
-                │     WEBSITE     │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │  GOOGLE SHEETS  │
-                │                 │
-                │ Data Collection │
-                └────────┬────────┘
-                         │
-              ┌──────────┴──────────┐
-              ▼                     ▼
-     ┌─────────────────┐   ┌─────────────────┐
-     │   DATA STUDIO   │   │    DATABRICKS   │
-     │                 │   │                 │
-     │ Visual Reporting│   │ Data Processing │
-     └─────────────────┘   └────────┬────────┘
-                                    │
-                                    ▼
-                           ┌─────────────────┐
-                           │       SQL       │
-                           │                 │
-                           │ Data Analysis   │
-                           └────────┬────────┘
-                                    │
-                                    ▼
-                           ┌─────────────────┐
-                           │    INSIGHTS     │
-                           │                 │
-                           │ Recommendations │
-                           └─────────────────┘
-#🛠️ Technology Stack
-Tool	Purpose
-🌐 Website	Information collection
-📊 Google Sheets	Data collection and organisation
-📈 Google Data Studio	Interactive visual reporting
-🧱 Databricks	Data processing and analysis
-🧮 SQL	Data querying and business analysis
-🐙 GitHub	Project documentation and portfolio
-📁 Project Structure
+| Tool | Purpose |
+|---|---|
+| 🌐 Website (Figma prototype) | Information collection |
+| 📊 Google Sheets | Data collection and organisation |
+| ☁️ BigQuery | Cloud data warehouse |
+| 📈 Looker Studio (Google Data Studio) | Interactive visual reporting |
+| 🧱 Databricks | Data processing and analysis |
+| 🧮 SQL | Querying and business analysis |
+| 🐙 GitHub | Documentation and portfolio |
+
+---
+
+## 📁 Repository Structure
+
+```
 FarewellHub/
 │
 ├── README.md
@@ -404,117 +330,66 @@ FarewellHub/
 │
 └── 7. Presentation/
     └── FarewellHub Presentation
+```
 
-#📸 Project Screenshots
-🌐 Website
-<p align="center"> <img src="images/website.png" alt="FarewellHub Website" width="90%"> </p>
-📊 Google Sheets
-<p align="center"> <img src="images/google-sheets.png" alt="FarewellHub Google Sheets Dataset" width="90%"> </p>
-📈 Google Data Studio
-<p align="center"> <img src="images/data-studio.png" alt="FarewellHub Data Studio Dashboard" width="90%"> </p>
-🧱 Databricks
-<p align="center"> <img src="images/databricks.png" alt="FarewellHub Databricks Analysis" width="90%"> </p>
-📋 Project Workflow
+---
 
-The complete project followed this workflow:
+## 🎓 What I Learned
 
-1. Build / use FarewellHub website
-             ↓
-2. Collect information
-             ↓
-3. Organise information in Google Sheets
-             ↓
-4. Connect dataset to Google Data Studio
-             ↓
-5. Explore information visually
-             ↓
-6. Bring data into Databricks
-             ↓
-7. Inspect and prepare the data
-             ↓
-8. Write SQL queries
-             ↓
-9. Answer business questions
-             ↓
-10. Identify insights
-             ↓
-11. Develop recommendations
-             ↓
-12. Document the complete project on GitHub
+This project taught me the **full analytics process**, not SQL alone.
 
-#🎓 What I Learned
+**Technical skills**
+`Data collection` · `Data organisation` · `Data quality checking` · `Data preparation` · `SQL` · `Databricks` · `BigQuery` · `Google Sheets` · `Looker Studio` · `Data visualisation` · `GitHub documentation`
 
-This project helped me practise the complete data analytics process rather than focusing on SQL alone.
+**Analytical skills**
+- Translating business needs into answerable questions
+- Understanding a dataset before analysing it
+- Identifying patterns and comparing categories
+- Spotting trends over time
+- Communicating findings clearly
+- Turning findings into recommendations
 
-Technical Skills
-Data collection
-Data organisation
-Data preparation
-Data quality checking
-SQL querying
-Databricks
-Google Sheets
-Google Data Studio
-Data visualisation
-GitHub documentation
-Analytical Skills
-Translating business needs into questions
-Understanding a dataset before analysing it
-Identifying patterns
-Comparing categories
-Looking for trends
-Communicating findings
-Turning findings into recommendations
+### 🎯 The business analyst approach
 
-#🎯 The Business Analyst Approach
+Analytics isn't just writing code. The tools support the process, but the goal is to help people **make better decisions**.
 
-One of the main lessons from this project was that analytics is not simply about writing code.
+```
+BUSINESS PROBLEM → BUSINESS QUESTION → DATA → ANALYSIS
+        → FINDING → INSIGHT → RECOMMENDATION → BUSINESS ACTION
+```
 
-The workflow is:
+---
 
-BUSINESS PROBLEM
-       ↓
-BUSINESS QUESTION
-       ↓
-DATA
-       ↓
-ANALYSIS
-       ↓
-FINDING
-       ↓
-INSIGHT
-       ↓
-RECOMMENDATION
-       ↓
-BUSINESS ACTION
+## 🚀 Future Improvements
 
-The tools support the process, but the final objective is to help people make better decisions.
+- [ ] Automated data collection and pipelines
+- [ ] Automated dashboard refreshes
+- [ ] Automated data-quality monitoring
+- [ ] Additional business KPIs
+- [ ] More advanced SQL analysis
+- [ ] Customer segmentation
+- [ ] Geographic analysis
+- [ ] Predictive analytics
+- [ ] Power BI reporting
 
-#🚀 Future Improvements
+---
 
-Future versions of FarewellHub could include:
+## 👩‍💻 About the Author
 
-Automated data collection
-Automated data pipelines
-Additional business KPIs
-More advanced SQL analysis
-Customer segmentation
-Geographic analysis
-Automated dashboard refreshes
-Predictive analytics
-Additional Power BI reporting
-Automated data-quality monitoring
+**Alice**
+Data Analyst · Business Analysis · SQL · Python · Excel · Power BI · Databricks
 
-#👩‍💻 Author
-Alice
+This project is part of my data analytics portfolio. It shows I can take a project from **data collection** through to **analysis, visualisation and business insight**.
 
-Data Analyst | Business Analysis | SQL | Python | Excel | Power BI | Databricks
 
-This project forms part of my data analytics portfolio and demonstrates my ability to take a project from data collection through to analysis, visualisation and business insight.
+---
 
 <div align="center">
-🕊️ FarewellHub
 
-From information → to data → to insight → to better decisions.
+### 🕊️ FarewellHub
 
-</div> ```
+**From information → to data → to insight → to better decisions.**
+
+⭐ If you found this project useful, consider giving it a star.
+
+</div>
