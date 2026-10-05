@@ -19,6 +19,11 @@
 </p>
 
 ---
+https://www.figma.com/make/sYnPIxBm1Ql967WDRmesjd/Funeral-Service-Hub?code-node-id=0-9&p=f&t=hKoiVl6iZFMhH9ly-0&fullscreen=1
+https://docs.google.com/spreadsheets/d/16MxvoM3bt23Jw0mS1rV2pscQjTzJYCYj4i1E0j3H7sU/edit?gid=1309034753#gid=1309034753
+https://console.cloud.google.com/bigquery?authuser=2&organizationId=0&project=farewellhub&supportedpurview=project&ws=!1m12!1m5!4m3!1sfarewellhub!2sFarewellHub!3sFarewellHub_leads!23sRECENT_RESOURCES!1m5!1m3!1sfarewellhub!2sjob_c9sXsmsqv_2oDGYUnZPTShRrW6bb!3safrica-south1!23sQUERY_RESOURCE
+https://datastudio.google.com/u/2/reporting/create?c.mode=edit&c.source=BQ_UI&ds.type=CUSTOM_QUERY&ds.connector=BIG_QUERY&ds.sql=SELECT%20*%0D%0A%20FROM%20%60farewellhub.FarewellHub.FarewellHub_leads%60%20LIMIT%201000&ds.billingProjectId=farewellhub&ds.projectId=farewellhub&ds.tableId=anonev_VAz6XDEPtoni_du5euFt2_J2zGW8Pqk1EYdvosRBlC4&ds.datasetId=_81123107b961e1907cd4ac4cb4ed0b6dc3aa1aff&ds.sqlType=STANDARD_SQL
+https://dbc-1f555e68-384c.cloud.databricks.com/editor/notebooks/3439460449319517?o=7474652278053184#command/8008453004454762
 
 # 📌 Project Overview
 
